@@ -1,0 +1,85 @@
+.section-1-main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* чтобы секция была на весь экран */
+}
+
+.section-1-container {
+  top: 168px;
+  position: absolute;
+  width: 1374px;
+  height: 397px;
+  left: 146px;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.text-container {
+  width: 100%;
+  height: 272px;
+  background: transparent;
+}
+
+.download-and-demo-container {
+  display: flex;
+  gap: 20px;
+  height: 70px;
+  align-items: center;
+}
+
+/* Кнопки идентичные хедеру */
+.download-and-demo-container .green-button,
+.download-and-demo-container .outline-button {
+  height: 70px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 500;
+  border: none;
+}
+
+.download-and-demo-container .green-button {
+  width: 373px;
+  background: var(--green-color);
+  color: white;
+}
+
+.download-and-demo-container .outline-button {
+  width: 495px;
+  background: transparent;
+  border: 2px solid var(--green-color);
+  color: var(--green-color);
+}
+
+.text-container {
+  width: 100%;
+  height: 272px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.h1-container {
+  padding: 10px 0;
+}
+
+.h1-container h1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.h2-container {
+  padding: 10px 0;
+}
+
+.h2-container h2 {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin: 0;
+}

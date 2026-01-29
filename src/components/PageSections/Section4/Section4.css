@@ -1,0 +1,146 @@
+section.section-4 {
+  min-height: 200vh;
+  padding-bottom: 200px;
+}
+
+section.section-4 .section-4-content-container {
+  width: calc(100% - 292px);
+  margin: 520px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+section.section-4 .section-4-header-container {
+  margin-bottom: 40px;
+}
+
+section.section-4 .section-4-header-container h1 {
+  font-size: 64px;
+  line-height: 1.2;
+}
+
+section.section-4 .section-4-carousel-container {
+  height: 500px;
+  border-radius: 64px;
+  box-shadow: 0px 14px 35px 3px rgba(0, 0, 0, 0.08);
+  background-color: white;
+  padding: 60px 0;
+  position: relative;
+}
+
+section.section-4 .section-4-block-container {
+  width: calc(100% - 320px);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+
+section.section-4 .picture-container {
+  width: 950px;
+  height: 100%;
+  border-radius: 24px;
+  background-color: #d9d9d9;
+  flex-shrink: 0;
+}
+
+section.section-4 .info-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+}
+
+section.section-4 .info-container-header {
+  font-size: 32px;
+}
+
+section.section-4 .info-container-text {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.info-container-header,
+.info-container-text {
+  animation: fade 0.7s ease;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-arrow-left::before,
+.carousel-arrow-right::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.carousel-arrow-left::before {
+  border-left: 8px solid var(--green-color);
+  border-bottom: 8px solid var(--green-color);
+  border-radius: 0 0 0 12px;
+}
+
+.carousel-arrow-right::before {
+  border-right: 8px solid var(--green-color);
+  border-top: 8px solid var(--green-color);
+  border-radius: 0 12px 0 0;
+}
+
+.carousel-arrow:hover::before {
+  border-color: #16a34a;
+  transform: translate(-50%, -50%) rotate(45deg) scale(1.1);
+}
+
+.carousel-arrow-left { left: 40px; }
+.carousel-arrow-right { right: 40px; }
+
+.carousel-indicators {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.carousel-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-indicator.active {
+  background-color: var(--green-color);
+}
+
+.carousel-indicator:hover {
+  background-color: #b8b8b8;
+}
+
+.carousel-indicator.active:hover {
+  background-color: #16a34a;
+}

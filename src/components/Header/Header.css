@@ -1,0 +1,74 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 111px;
+  background: white;
+  box-shadow: 0 5px 10.2px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  
+}
+
+.header__container {
+  position: absolute;
+  width: calc(100% - 70px);
+  height: 75px;
+  top: 19px;
+  left: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Логотип */
+.logo-container {
+  width: 216px;
+  height: 100%;
+}
+
+/* Центральное меню */
+.about-container {
+  display: flex;
+  align-items: center;
+  height: 49px;
+  gap: 24px;
+}
+
+.about-container a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* Правые кнопки */
+.buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.green-button,
+.outline-button {
+  height: 64px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 500;
+  border: none;
+}
+
+.green-button {
+  width: 373px;
+  background: var(--green-color);
+  color: white;
+}
+
+.outline-button {
+  width: 272px;
+  background: transparent;
+  border: 2px solid var(--green-color);
+  color: var(--green-color);
+}

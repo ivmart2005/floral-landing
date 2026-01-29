@@ -1,0 +1,71 @@
+section.section-6 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 100px 0;
+}
+
+section.section-6 .section-6-container {
+  width: calc(100% - 292px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Заголовок */
+section.section-6 .section-6-header-h1 {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+section.section-6 .section-6-header-h1 h1 {
+  font-weight: 700;
+  font-size: 96px; /* было 64px */
+  margin: 0;
+  text-align: left;
+}
+
+/* Грид с 4 боксами */
+section.section-6 .section-6-horizontal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  align-items: stretch; /* боксы растягиваются по высоте */
+}
+
+/* Бокс */
+section.section-6 .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  /* Убрал background-color и border-radius */
+}
+
+/* Логотип */
+section.section-6 .logo-container {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+/* Специальность - прижата к верху */
+section.section-6 .speciality-container {
+  font-weight: 500;
+  font-size: 36px;
+  color: var(--green-color);
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+/* Информация - занимает оставшееся пространство */
+section.section-6 .info-container {
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+  line-height: 1.4;
+  flex: 1; /* занимает все доступное пространство снизу */
+  display: flex;
+  align-items: flex-start; /* текст начинается сверху */
+}
