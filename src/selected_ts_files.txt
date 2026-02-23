@@ -1,0 +1,2448 @@
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\App.css
+================================================================================
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --green-color: #78D36A;
+  --light-green-color: #FCFFF4;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  transform: scale(0.7);
+  transform-origin: 0 0;
+  width: 142vw;
+  height: 142vh;
+  overflow-x: hidden;
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\App.tsx
+================================================================================
+import Header from './components/Header/Header';
+import Section1Main from './components/PageSections/Section1Main/Section1Main';
+import Section2 from './components/PageSections/Section2/Section2Main';
+import Section3 from './components/PageSections/Section3/Section3';
+import Section4 from './components/PageSections/Section4/Section4';
+import Section5 from './components/PageSections/Section5/Section5';
+import Section6 from './components/PageSections/Section6/Section6';
+import './App.css';
+
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Section1Main />
+      <Section2 />
+      <Section3 />
+      <Section4 />
+      <Section6 />
+      <Section5 />
+    </>
+  );
+};
+
+export default App;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\Header\Header.css
+================================================================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 111px;
+  background: white;
+  box-shadow: 0 5px 10.2px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.header__container {
+  position: absolute;
+  width: calc(100% - 70px);
+  height: 75px;
+  top: 19px;
+  left: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  width: 216px;
+  height: 100%;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  height: 49px;
+  gap: 42px;
+}
+
+.about-container a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 400;
+  transition: color 0.2s ease, transform 0.2s ease;
+  padding: 40px 10px;
+  display: inline-block;
+}
+
+.about-container a:hover {
+  color: var(--green-color);
+  transform: scale(1.03);
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.green-button,
+.outline-button {
+  height: 64px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 400;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: inherit;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.green-button:hover,
+.outline-button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+.green-button {
+  width: 373px;
+  background: var(--green-color);
+  color: white;
+}
+
+.outline-button {
+  width: 272px;
+  background: transparent;
+  border: 2px solid var(--green-color);
+  color: var(--green-color);
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\Header\Header.css
+================================================================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 111px;
+  background: white;
+  box-shadow: 0 5px 10.2px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.header__container {
+  position: absolute;
+  width: calc(100% - 70px);
+  height: 75px;
+  top: 19px;
+  left: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  width: 216px;
+  height: 100%;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  height: 49px;
+  gap: 42px;
+}
+
+.about-container a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 400;
+  transition: color 0.2s ease, transform 0.2s ease;
+  padding: 40px 10px;
+  display: inline-block;
+}
+
+.about-container a:hover {
+  color: var(--green-color);
+  transform: scale(1.03);
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.green-button,
+.outline-button {
+  height: 64px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 400;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: inherit;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.green-button:hover,
+.outline-button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+.green-button {
+  width: 373px;
+  background: var(--green-color);
+  color: white;
+}
+
+.outline-button {
+  width: 272px;
+  background: transparent;
+  border: 2px solid var(--green-color);
+  color: var(--green-color);
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\Header\Header.tsx
+================================================================================
+import { useState, useEffect } from 'react';
+import './Header.css';
+
+const Header = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenWidth = () => {
+      setIsMobile(window.innerWidth < 1000);
+    };
+    checkScreenWidth();
+    window.addEventListener('resize', checkScreenWidth);
+    return () => {
+      window.removeEventListener('resize', checkScreenWidth);
+    };
+  }, []);
+
+  const scrollToClass = (className: string) => {
+    const element = document.querySelector(`.${className}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const base = import.meta.env.BASE_URL;
+
+  return (
+    <header className="header">
+      <div className="header__container">
+        <div className="logo-container">
+          <img
+            src={`${base}images/interface/logo.svg`}
+            alt="logo"
+            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+          />
+        </div>
+        <div className="about-container">
+          <a onClick={() => scrollToClass('section-3')}>Решение</a>
+          <a onClick={() => scrollToClass('section-4')}>О редакторе</a>
+          <a onClick={() => scrollToClass('section-6')}>Для кого</a>
+        </div>
+        
+        {!isMobile && (
+          <div className="buttons-container">
+            <button className="green-button">
+              Скачать на Windows
+              <img src={`${base}images/interface/download-icon-white.svg`} alt="" className="btn-icon" />
+            </button>
+            <button className="outline-button">
+              Попробовать
+              <img src={`${base}images/interface/round-arrow.svg`} alt="" className="btn-icon" />
+            </button>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default Header;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\Header\Header.tsx
+================================================================================
+import { useState, useEffect } from 'react';
+import './Header.css';
+
+const Header = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenWidth = () => {
+      setIsMobile(window.innerWidth < 1000);
+    };
+    checkScreenWidth();
+    window.addEventListener('resize', checkScreenWidth);
+    return () => {
+      window.removeEventListener('resize', checkScreenWidth);
+    };
+  }, []);
+
+  const scrollToClass = (className: string) => {
+    const element = document.querySelector(`.${className}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const base = import.meta.env.BASE_URL;
+
+  return (
+    <header className="header">
+      <div className="header__container">
+        <div className="logo-container">
+          <img
+            src={`${base}images/interface/logo.svg`}
+            alt="logo"
+            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+          />
+        </div>
+        <div className="about-container">
+          <a onClick={() => scrollToClass('section-3')}>Решение</a>
+          <a onClick={() => scrollToClass('section-4')}>О редакторе</a>
+          <a onClick={() => scrollToClass('section-6')}>Для кого</a>
+        </div>
+        
+        {!isMobile && (
+          <div className="buttons-container">
+            <button className="green-button">
+              Скачать на Windows
+              <img src={`${base}images/interface/download-icon-white.svg`} alt="" className="btn-icon" />
+            </button>
+            <button className="outline-button">
+              Попробовать
+              <img src={`${base}images/interface/round-arrow.svg`} alt="" className="btn-icon" />
+            </button>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default Header;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section1Main\Section1Main.css
+================================================================================
+.section-1-main {
+  position: relative;
+  width: 100%;
+  min-height: 140vh; 
+  background-color: var(--green-color);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-flower-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-flower-img {
+  width: 100%;
+  height: auto;
+  transform: rotate(30deg);
+  object-fit: cover;
+  opacity: 0.6;
+  filter: brightness(1.8) contrast(1.1);
+}
+
+.section-1-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1374px;
+  width: calc(100% - 292px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 60px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.text-container h1 {
+  color: white;
+  margin: 0;
+  line-height: 1.1;
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.text-container h2 {
+  color: white;
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 300;
+  font-size: 32px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.download-and-demo-container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.white-button-green-text {
+  height: 75px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 500;
+  border: none;
+  background-color: white;
+  color: var(--green-color);
+  padding: 0 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: transform 0.2s ease;
+}
+
+.white-button-green-text:hover {
+  transform: scale(1.05);
+}
+
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.download-and-demo-container button:nth-child(1) {
+  width: 373px;
+}
+
+.download-and-demo-container button:nth-child(2) {
+  width: 495px;
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section1Main\Section1Main.css
+================================================================================
+.section-1-main {
+  position: relative;
+  width: 100%;
+  min-height: 140vh; 
+  background-color: var(--green-color);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-flower-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-flower-img {
+  width: 100%;
+  height: auto;
+  transform: rotate(30deg);
+  object-fit: cover;
+  opacity: 0.6;
+  filter: brightness(1.8) contrast(1.1);
+}
+
+.section-1-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1374px;
+  width: calc(100% - 292px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 60px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.text-container h1 {
+  color: white;
+  margin: 0;
+  line-height: 1.1;
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.text-container h2 {
+  color: white;
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 300;
+  font-size: 32px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.download-and-demo-container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.white-button-green-text {
+  height: 75px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 500;
+  border: none;
+  background-color: white;
+  color: var(--green-color);
+  padding: 0 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: transform 0.2s ease;
+}
+
+.white-button-green-text:hover {
+  transform: scale(1.05);
+}
+
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.download-and-demo-container button:nth-child(1) {
+  width: 373px;
+}
+
+.download-and-demo-container button:nth-child(2) {
+  width: 495px;
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section1Main\Section1Main.tsx
+================================================================================
+import './Section1Main.css';
+
+const Section1Main = () => {
+  const base = import.meta.env.BASE_URL;
+
+  return (
+    <section className="section-1-main">
+      <div className="background-flower-wrapper">
+        <img
+          src={`${base}images/interface/transparent-flower.svg`}
+          className="bg-flower-img"
+          alt=""
+        />
+      </div>
+
+      <div className="section-1-container">
+        <div className="text-container">
+          <h1>Визуализируйте идеи до того, как возьмете в руки первый цветок</h1>
+          <h2>Создавайте, экспериментируйте и показывайте клиентам идеальные
+          букеты в цифровом виде. Экономьте время и материалы, повышайте конверсию заказов.</h2>
+        </div>
+        
+        <div className="download-and-demo-container">
+          <button className="white-button-green-text">
+            Скачать на Windows
+            <img src={`${base}images/interface/download-icon.svg`} className="btn-icon" alt="" />
+          </button>
+          <button className="white-button-green-text">
+            Собрать первый букет онлайн
+            <img src={`${base}images/interface/round-arrow.svg`} className="btn-icon" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Section1Main;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section1Main\Section1Main.tsx
+================================================================================
+import './Section1Main.css';
+
+const Section1Main = () => {
+  const base = import.meta.env.BASE_URL;
+
+  return (
+    <section className="section-1-main">
+      <div className="background-flower-wrapper">
+        <img
+          src={`${base}images/interface/transparent-flower.svg`}
+          className="bg-flower-img"
+          alt=""
+        />
+      </div>
+
+      <div className="section-1-container">
+        <div className="text-container">
+          <h1>Визуализируйте идеи до того, как возьмете в руки первый цветок</h1>
+          <h2>Создавайте, экспериментируйте и показывайте клиентам идеальные
+          букеты в цифровом виде. Экономьте время и материалы, повышайте конверсию заказов.</h2>
+        </div>
+        
+        <div className="download-and-demo-container">
+          <button className="white-button-green-text">
+            Скачать на Windows
+            <img src={`${base}images/interface/download-icon.svg`} className="btn-icon" alt="" />
+          </button>
+          <button className="white-button-green-text">
+            Собрать первый букет онлайн
+            <img src={`${base}images/interface/round-arrow.svg`} className="btn-icon" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Section1Main;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section2\Section2Main.css
+================================================================================
+section.section-2 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+section.section-2 .centered-container {
+  width: calc(100% - 292px);
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+section.section-2 .h1-container {
+  margin-bottom: 80px;
+}
+
+section.section-2 .h1-container h1 {
+  font-weight: 700;
+  font-size: 64px;
+  margin: 0;
+  color: var(--green-color);
+  line-height: 110%;
+}
+
+section.section-2 .flex-container {
+  display: flex;
+  gap: 100px;
+}
+
+section.section-2 .box {
+  height: 240px;
+  border-radius: 48px;
+  padding: 60px 24px 20px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  background-color: white;
+  border: 5px solid var(--green-color);
+  box-shadow: none;
+  color: var(--green-color);
+}
+
+.box-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-bottom: 20px; 
+}
+
+.box-text {
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+  line-height: 120%;
+  margin: 0;
+  display: block; 
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section2\Section2Main.css
+================================================================================
+section.section-2 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+section.section-2 .centered-container {
+  width: calc(100% - 292px);
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+section.section-2 .h1-container {
+  margin-bottom: 80px;
+}
+
+section.section-2 .h1-container h1 {
+  font-weight: 700;
+  font-size: 64px;
+  margin: 0;
+  color: var(--green-color);
+  line-height: 110%;
+}
+
+section.section-2 .flex-container {
+  display: flex;
+  gap: 100px;
+}
+
+section.section-2 .box {
+  height: 240px;
+  border-radius: 48px;
+  padding: 60px 24px 20px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  background-color: white;
+  border: 5px solid var(--green-color);
+  box-shadow: none;
+  color: var(--green-color);
+}
+
+.box-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-bottom: 20px; 
+}
+
+.box-text {
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+  line-height: 120%;
+  margin: 0;
+  display: block; 
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section2\Section2Main.tsx
+================================================================================
+import './Section2Main.css';
+
+const Section2 = () => {
+  const base = import.meta.env.BASE_URL;
+
+  return (
+    <section className="section-2">
+      <div className="centered-container">
+        <div className="h1-container">
+          <h1>
+            Тратите часы на подбор цветов
+            <br />
+            и объяснения?
+          </h1>
+        </div>
+        <div className="flex-container">
+          <div className="box">
+            <img 
+              src={`${base}images/interface/client-svg.svg`} 
+              className="box-icon" 
+              alt="" 
+            />
+            <span className="box-text">Клиент говорит «хочу что-то нежное» – и вы тратите полдня на подбор и эскизы</span>
+          </div>
+          <div className="box">
+            <img 
+              src={`${base}images/interface/rubbish-bin.svg`} 
+              className="box-icon" 
+              alt="" 
+            />
+            <span className="box-text">Жалко выбрасывать цветы после неудачного эксперимента с композицией</span>
+          </div>
+          <div className="box">
+            <img 
+              src={`${base}images/interface/clock.svg`} 
+              className="box-icon" 
+              alt="" 
+            />
+            <span className="box-text">На подбор референсов уходит слишком много времени</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Section2;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section2\Section2Main.tsx
+================================================================================
+import './Section2Main.css';
+
+const Section2 = () => {
+  const base = import.meta.env.BASE_URL;
+
+  return (
+    <section className="section-2">
+      <div className="centered-container">
+        <div className="h1-container">
+          <h1>
+            Тратите часы на подбор цветов
+            <br />
+            и объяснения?
+          </h1>
+        </div>
+        <div className="flex-container">
+          <div className="box">
+            <img 
+              src={`${base}images/interface/client-svg.svg`} 
+              className="box-icon" 
+              alt="" 
+            />
+            <span className="box-text">Клиент говорит «хочу что-то нежное» – и вы тратите полдня на подбор и эскизы</span>
+          </div>
+          <div className="box">
+            <img 
+              src={`${base}images/interface/rubbish-bin.svg`} 
+              className="box-icon" 
+              alt="" 
+            />
+            <span className="box-text">Жалко выбрасывать цветы после неудачного эксперимента с композицией</span>
+          </div>
+          <div className="box">
+            <img 
+              src={`${base}images/interface/clock.svg`} 
+              className="box-icon" 
+              alt="" 
+            />
+            <span className="box-text">На подбор референсов уходит слишком много времени</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Section2;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section3\Section3.css
+================================================================================
+section.section-3 {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 150px; 
+  padding-top: 100px; 
+  padding-bottom: 160px;
+  background-color: var(--green-color);
+  display: flex;
+  justify-content: center;
+}
+
+section.section-3 .section-3-container {
+  width: calc(100% - 292px);
+  display: flex;
+  flex-direction: column;
+  gap: 80px; 
+}
+
+section.section-3 .section-3-h1-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+section.section-3 .section-3-h1-container h1 {
+  font-weight: 700;
+  font-size: 83px; 
+  color: white;
+  margin: 0;
+  text-align: center;
+  line-height: 1;
+}
+
+.underline-img {
+  width: 100%;
+  max-width: 600px;
+}
+
+section.section-3 .section-3-main-info-container {
+  width: 100%;
+  min-height: 710px;
+  display: flex;
+  gap: 24px;
+}
+
+section.section-3 .logo-and-text-container {
+  flex: 1;
+  background-color: white;
+  border-radius: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+section.section-3 .content-container {
+  width: calc(100% - 120px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+}
+
+.logo-wrapper {
+  width: 100%;
+}
+
+.content-logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+section.section-3 .text-container {
+  text-align: left;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.4;
+  color: var(--green-color);
+}
+
+section.section-3 .picture-container {
+  flex: 1;
+  background-color: #D5D5D5; 
+  border-radius: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-color);
+  font-size: 24px;
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section3\Section3.css
+================================================================================
+section.section-3 {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 150px; 
+  padding-top: 100px; 
+  padding-bottom: 160px;
+  background-color: var(--green-color);
+  display: flex;
+  justify-content: center;
+}
+
+section.section-3 .section-3-container {
+  width: calc(100% - 292px);
+  display: flex;
+  flex-direction: column;
+  gap: 80px; 
+}
+
+section.section-3 .section-3-h1-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+section.section-3 .section-3-h1-container h1 {
+  font-weight: 700;
+  font-size: 83px; 
+  color: white;
+  margin: 0;
+  text-align: center;
+  line-height: 1;
+}
+
+.underline-img {
+  width: 100%;
+  max-width: 600px;
+}
+
+section.section-3 .section-3-main-info-container {
+  width: 100%;
+  min-height: 710px;
+  display: flex;
+  gap: 24px;
+}
+
+section.section-3 .logo-and-text-container {
+  flex: 1;
+  background-color: white;
+  border-radius: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+section.section-3 .content-container {
+  width: calc(100% - 120px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+}
+
+.logo-wrapper {
+  width: 100%;
+}
+
+.content-logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+section.section-3 .text-container {
+  text-align: left;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.4;
+  color: var(--green-color);
+}
+
+section.section-3 .picture-container {
+  flex: 1;
+  background-color: #D5D5D5; 
+  border-radius: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-color);
+  font-size: 24px;
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section3\Section3.tsx
+================================================================================
+import './Section3.css';
+
+const Section3 = () => {
+  const base = import.meta.env.BASE_URL;
+
+  return (
+    <section className="section-3">
+      <div className="section-3-container">
+        <div className="section-3-h1-container">
+          <div className="title-wrapper">
+            <h1>Решение есть:</h1>
+            <img src={`${base}images/interface/underline.svg`} alt="" className="underline-img" />
+          </div>
+        </div>
+        
+        <div className="section-3-main-info-container">
+          <div className="logo-and-text-container">
+            <div className="content-container">
+              <div className="logo-wrapper">
+                <img src={`${base}images/interface/logo-green.svg`} alt="Logo" className="content-logo" />
+              </div>
+              <div className="text-container">
+                Создавайте визуальные прототипы букетов, используя обширный каталог цветов. Показывайте готовые варианты клиентам, меняйте оттенки и компоненты за секунды и утверждайте дизайн до начала сборки.
+              </div>
+            </div>
+          </div>
+          <div className="picture-container">
+            picture-container
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Section3;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section3\Section3.tsx
+================================================================================
+import './Section3.css';
+
+const Section3 = () => {
+  const base = import.meta.env.BASE_URL;
+
+  return (
+    <section className="section-3">
+      <div className="section-3-container">
+        <div className="section-3-h1-container">
+          <div className="title-wrapper">
+            <h1>Решение есть:</h1>
+            <img src={`${base}images/interface/underline.svg`} alt="" className="underline-img" />
+          </div>
+        </div>
+        
+        <div className="section-3-main-info-container">
+          <div className="logo-and-text-container">
+            <div className="content-container">
+              <div className="logo-wrapper">
+                <img src={`${base}images/interface/logo-green.svg`} alt="Logo" className="content-logo" />
+              </div>
+              <div className="text-container">
+                Создавайте визуальные прототипы букетов, используя обширный каталог цветов. Показывайте готовые варианты клиентам, меняйте оттенки и компоненты за секунды и утверждайте дизайн до начала сборки.
+              </div>
+            </div>
+          </div>
+          <div className="picture-container">
+            picture-container
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Section3;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section4\Section4.css
+================================================================================
+section.section-4 {
+  min-height: 100vh;
+  padding-bottom: 200px;
+  position: relative;
+  overflow: hidden; 
+}
+
+section.section-4 .section-4-content-container {
+  width: calc(100% - 460px);
+  margin: 174px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+section.section-4 .section-4-header-container {
+  margin-bottom: 40px;
+}
+
+section.section-4 .section-4-header-container h1 {
+  font-size: 64px;
+  line-height: 1.2;
+  color: var(--green-color);
+  font-weight: 700;
+  margin: 0;
+}
+
+.carousel-wrapper {
+  position: relative !important;
+  width: 100%;
+  z-index: 1;
+}
+
+.bg-flower-corner {
+  position: absolute !important;
+  top: -320px;    
+  right: -180px;  
+  width: 800px; 
+  height: auto;
+  transform: rotate(-30deg);
+  z-index: 1; 
+  pointer-events: none;
+  display: block;
+}
+
+section.section-4 .section-4-carousel-container {
+  height: 600px;
+  border-radius: 64px;
+  border: 7px solid var(--green-color);
+  background-color: #FFFFFF;
+  padding: 60px 0;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+section.section-4 .section-4-block-container {
+  width: calc(100% - 320px);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0.2; 
+  }
+  to { 
+    opacity: 1; 
+  }
+}
+
+section.section-4 .picture-container {
+  width: 950px;
+  height: 100%;
+  border-radius: 24px;
+  background-color: #d9d9d9;
+  flex-shrink: 0;
+}
+
+section.section-4 .info-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+  color: #000;
+}
+
+section.section-4 .info-container-header {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+section.section-4 .info-container-text {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+section.section-4 .info-container-text p {
+  margin: 0;
+}
+
+section.section-4 .info-container-text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s ease, opacity 0.2s;
+}
+
+.carousel-arrow:hover {
+  opacity: 0.7;
+}
+
+.carousel-arrow-left:active { transform: translateY(-50%) scale(0.9) translateX(-5px); }
+.carousel-arrow-right:active { transform: translateY(-50%) scale(0.9) translateX(5px); }
+
+.carousel-arrow-left { left: 40px; }
+.carousel-arrow-right { right: 40px; }
+
+.carousel-arrow-left::before,
+.carousel-arrow-right::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transition: border-color 0.2s;
+}
+
+.carousel-arrow-left::before {
+  border-left: 8px solid var(--green-color);
+  border-bottom: 8px solid var(--green-color);
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 0 0 0 12px;
+}
+
+.carousel-arrow-right::before {
+  border-right: 8px solid var(--green-color);
+  border-top: 8px solid var(--green-color);
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 0 12px 0 0;
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.carousel-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.carousel-indicator:hover { transform: scale(1.2); }
+
+.carousel-indicator.active {
+  background-color: var(--green-color);
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section4\Section4.css
+================================================================================
+section.section-4 {
+  min-height: 100vh;
+  padding-bottom: 200px;
+  position: relative;
+  overflow: hidden; 
+}
+
+section.section-4 .section-4-content-container {
+  width: calc(100% - 460px);
+  margin: 174px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+section.section-4 .section-4-header-container {
+  margin-bottom: 40px;
+}
+
+section.section-4 .section-4-header-container h1 {
+  font-size: 64px;
+  line-height: 1.2;
+  color: var(--green-color);
+  font-weight: 700;
+  margin: 0;
+}
+
+.carousel-wrapper {
+  position: relative !important;
+  width: 100%;
+  z-index: 1;
+}
+
+.bg-flower-corner {
+  position: absolute !important;
+  top: -320px;    
+  right: -180px;  
+  width: 800px; 
+  height: auto;
+  transform: rotate(-30deg);
+  z-index: 1; 
+  pointer-events: none;
+  display: block;
+}
+
+section.section-4 .section-4-carousel-container {
+  height: 600px;
+  border-radius: 64px;
+  border: 7px solid var(--green-color);
+  background-color: #FFFFFF;
+  padding: 60px 0;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+section.section-4 .section-4-block-container {
+  width: calc(100% - 320px);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0.2; 
+  }
+  to { 
+    opacity: 1; 
+  }
+}
+
+section.section-4 .picture-container {
+  width: 950px;
+  height: 100%;
+  border-radius: 24px;
+  background-color: #d9d9d9;
+  flex-shrink: 0;
+}
+
+section.section-4 .info-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+  color: #000;
+}
+
+section.section-4 .info-container-header {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+section.section-4 .info-container-text {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+section.section-4 .info-container-text p {
+  margin: 0;
+}
+
+section.section-4 .info-container-text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s ease, opacity 0.2s;
+}
+
+.carousel-arrow:hover {
+  opacity: 0.7;
+}
+
+.carousel-arrow-left:active { transform: translateY(-50%) scale(0.9) translateX(-5px); }
+.carousel-arrow-right:active { transform: translateY(-50%) scale(0.9) translateX(5px); }
+
+.carousel-arrow-left { left: 40px; }
+.carousel-arrow-right { right: 40px; }
+
+.carousel-arrow-left::before,
+.carousel-arrow-right::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transition: border-color 0.2s;
+}
+
+.carousel-arrow-left::before {
+  border-left: 8px solid var(--green-color);
+  border-bottom: 8px solid var(--green-color);
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 0 0 0 12px;
+}
+
+.carousel-arrow-right::before {
+  border-right: 8px solid var(--green-color);
+  border-top: 8px solid var(--green-color);
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 0 12px 0 0;
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.carousel-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.carousel-indicator:hover { transform: scale(1.2); }
+
+.carousel-indicator.active {
+  background-color: var(--green-color);
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section4\Section4.tsx
+================================================================================
+import { useState } from 'react';
+import './Section4.css';
+
+const Section4 = () => {
+  const [currentBlock, setCurrentBlock] = useState(0);
+
+  const blocks = [
+    {
+      title: "Большой каталог с разными цветами",
+      text: [
+        "Огромная база цветов позволит вам собрать любой букет, который хочется.",
+        "Меняйте ракурсы цветов в один клик, чтобы каждому цветку нашлось место в букете"
+      ],
+    },
+    {
+      title: "Система фильтрации",
+      text: [
+        "Ищите нужный цветок с помощью удобных фильтров, используйте круг Иттена, чтобы найти нужный цвет цветка.",
+        "А с помощью фильтрации по типу вы сможете найти все цветы в каталоге нужного вам вида"
+      ],
+    },
+    {
+      title: "Удобная настройка цветка",
+      text: ["Меняйте разные параметры цветка: от его размера до насыщенности"],
+    },
+    {
+      title: "Файловая система",
+      text: ["Создавайте новые холсты и храните все созданные букеты в одном месте"],
+    }
+  ];
+
+  const nextBlock = () => setCurrentBlock((prev) => (prev + 1) % blocks.length);
+  const prevBlock = () => setCurrentBlock((prev) => (prev - 1 + blocks.length) % blocks.length);
+  const goToBlock = (index: number) => setCurrentBlock(index);
+
+  return (
+    <section className="section-4">
+      <div className="section-4-content-container">
+        <div className="section-4-header-container">
+          <h1>Все, что нужно флористу,<br />в одном редакторе</h1>
+        </div>
+        
+        <div className="carousel-wrapper">
+          <img 
+            src="/images/interface/transparent-flower-green.svg"
+            alt="" 
+            className="bg-flower-corner" 
+          />
+
+          <div className="section-4-carousel-container">
+            <button className="carousel-arrow carousel-arrow-left" onClick={prevBlock} aria-label="Предыдущий блок" />
+            
+            <div className="section-4-block-container" key={currentBlock}>
+              <div className="picture-container"></div>
+              <div className="info-container">
+                <div className="info-container-header">
+                  {blocks[currentBlock].title}
+                </div>
+                <div className="info-container-text">
+                  {blocks[currentBlock].text.map((line, index) => (
+                    <p key={index}>{line}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+            <button className="carousel-arrow carousel-arrow-right" onClick={nextBlock} aria-label="Следующий блок" />
+          </div>
+        </div>
+
+        <div className="carousel-indicators">
+          {blocks.map((_, index) => (
+            <button
+              key={index}
+              className={`carousel-indicator ${index === currentBlock ? 'active' : ''}`}
+              onClick={() => goToBlock(index)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Section4;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section4\Section4.tsx
+================================================================================
+import { useState } from 'react';
+import './Section4.css';
+
+const Section4 = () => {
+  const [currentBlock, setCurrentBlock] = useState(0);
+
+  const blocks = [
+    {
+      title: "Большой каталог с разными цветами",
+      text: [
+        "Огромная база цветов позволит вам собрать любой букет, который хочется.",
+        "Меняйте ракурсы цветов в один клик, чтобы каждому цветку нашлось место в букете"
+      ],
+    },
+    {
+      title: "Система фильтрации",
+      text: [
+        "Ищите нужный цветок с помощью удобных фильтров, используйте круг Иттена, чтобы найти нужный цвет цветка.",
+        "А с помощью фильтрации по типу вы сможете найти все цветы в каталоге нужного вам вида"
+      ],
+    },
+    {
+      title: "Удобная настройка цветка",
+      text: ["Меняйте разные параметры цветка: от его размера до насыщенности"],
+    },
+    {
+      title: "Файловая система",
+      text: ["Создавайте новые холсты и храните все созданные букеты в одном месте"],
+    }
+  ];
+
+  const nextBlock = () => setCurrentBlock((prev) => (prev + 1) % blocks.length);
+  const prevBlock = () => setCurrentBlock((prev) => (prev - 1 + blocks.length) % blocks.length);
+  const goToBlock = (index: number) => setCurrentBlock(index);
+
+  return (
+    <section className="section-4">
+      <div className="section-4-content-container">
+        <div className="section-4-header-container">
+          <h1>Все, что нужно флористу,<br />в одном редакторе</h1>
+        </div>
+        
+        <div className="carousel-wrapper">
+          <img 
+            src="/images/interface/transparent-flower-green.svg"
+            alt="" 
+            className="bg-flower-corner" 
+          />
+
+          <div className="section-4-carousel-container">
+            <button className="carousel-arrow carousel-arrow-left" onClick={prevBlock} aria-label="Предыдущий блок" />
+            
+            <div className="section-4-block-container" key={currentBlock}>
+              <div className="picture-container"></div>
+              <div className="info-container">
+                <div className="info-container-header">
+                  {blocks[currentBlock].title}
+                </div>
+                <div className="info-container-text">
+                  {blocks[currentBlock].text.map((line, index) => (
+                    <p key={index}>{line}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+            <button className="carousel-arrow carousel-arrow-right" onClick={nextBlock} aria-label="Следующий блок" />
+          </div>
+        </div>
+
+        <div className="carousel-indicators">
+          {blocks.map((_, index) => (
+            <button
+              key={index}
+              className={`carousel-indicator ${index === currentBlock ? 'active' : ''}`}
+              onClick={() => goToBlock(index)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Section4;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section5\Section5.css
+================================================================================
+section.section-5 {
+  width: 100%;
+  background-color: var(--green-color);
+  padding: 120px 0 80px 0;
+  display: flex;
+  justify-content: center;
+  margin-top: -1px;
+  border: none;
+}
+
+section.section-6 {
+  margin-bottom: 0 !important;
+  padding-bottom: 100px;
+}
+
+section.section-5 .section-5-content-container {
+  width: calc(100% - 292px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 400px;
+  height: auto;
+}
+
+.navigation-block {
+  gap: 48px;
+  margin-top: 50px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  transition: transform 0.2s ease;
+}
+
+.nav-links button:hover {
+  transform: scale(1.05);
+}
+
+.social-container {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.social-container a {
+  display: flex;
+  transition: transform 0.2s ease;
+}
+
+.social-container a:hover {
+  transform: scale(1.1);
+}
+
+.social-container img {
+  width: 60px;
+  height: 60px;
+}
+
+.action-block {
+  align-items: flex-end;
+}
+
+.back-to-top-btn {
+  background-color: white;
+  color: var(--green-color);
+  padding: 18px 36px;
+  border-radius: 24px;
+  font-size: 36px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.2s ease;
+}
+
+.back-to-top-btn:hover {
+  transform: scale(1.05);
+}
+
+.back-to-top-btn .btn-icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section5\Section5.css
+================================================================================
+section.section-5 {
+  width: 100%;
+  background-color: var(--green-color);
+  padding: 120px 0 80px 0;
+  display: flex;
+  justify-content: center;
+  margin-top: -1px;
+  border: none;
+}
+
+section.section-6 {
+  margin-bottom: 0 !important;
+  padding-bottom: 100px;
+}
+
+section.section-5 .section-5-content-container {
+  width: calc(100% - 292px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 400px;
+  height: auto;
+}
+
+.navigation-block {
+  gap: 48px;
+  margin-top: 50px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  transition: transform 0.2s ease;
+}
+
+.nav-links button:hover {
+  transform: scale(1.05);
+}
+
+.social-container {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.social-container a {
+  display: flex;
+  transition: transform 0.2s ease;
+}
+
+.social-container a:hover {
+  transform: scale(1.1);
+}
+
+.social-container img {
+  width: 60px;
+  height: 60px;
+}
+
+.action-block {
+  align-items: flex-end;
+}
+
+.back-to-top-btn {
+  background-color: white;
+  color: var(--green-color);
+  padding: 18px 36px;
+  border-radius: 24px;
+  font-size: 36px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.2s ease;
+}
+
+.back-to-top-btn:hover {
+  transform: scale(1.05);
+}
+
+.back-to-top-btn .btn-icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section5\Section5.tsx
+================================================================================
+import './Section5.css';
+
+const Section5 = () => {
+  const base = import.meta.env.BASE_URL;
+
+  const scrollToClass = (className: string) => {
+    const element = document.querySelector(`.${className}`);
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <section className="section-5">
+      <div className="section-5-content-container">
+        
+        <div className="footer-block logo-block">
+          <img src={`${base}images/interface/logo3.svg`} alt="logo" className="footer-logo" />
+        </div>
+
+        <div className="footer-block navigation-block">
+          <div className="nav-links">
+            <button onClick={() => scrollToClass('section-3')}>Решение</button>
+            <button onClick={() => scrollToClass('section-4')}>О редакторе</button>
+            <button onClick={() => scrollToClass('section-6')}>Для кого</button>
+          </div>
+          <div className="social-container">
+            <a href="https://vk.com" target="_blank" rel="noreferrer">
+              <img src={`${base}images/interface/vk-icon.svg`} alt="vk" />
+            </a>
+            <a href="https://t.me" target="_blank" rel="noreferrer">
+              <img src={`${base}images/interface/tg-icon.svg`} alt="tg" />
+            </a>
+          </div>
+        </div>
+
+        <div className="footer-block action-block">
+          <button className="back-to-top-btn" onClick={scrollToTop}>
+            Вернуться наверх
+            <img src={`${base}images/interface/arrow-up.svg`} alt="" className="btn-icon" />
+          </button>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Section5;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section5\Section5.tsx
+================================================================================
+import './Section5.css';
+
+const Section5 = () => {
+  const base = import.meta.env.BASE_URL;
+
+  const scrollToClass = (className: string) => {
+    const element = document.querySelector(`.${className}`);
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <section className="section-5">
+      <div className="section-5-content-container">
+        
+        <div className="footer-block logo-block">
+          <img src={`${base}images/interface/logo3.svg`} alt="logo" className="footer-logo" />
+        </div>
+
+        <div className="footer-block navigation-block">
+          <div className="nav-links">
+            <button onClick={() => scrollToClass('section-3')}>Решение</button>
+            <button onClick={() => scrollToClass('section-4')}>О редакторе</button>
+            <button onClick={() => scrollToClass('section-6')}>Для кого</button>
+          </div>
+          <div className="social-container">
+            <a href="https://vk.com" target="_blank" rel="noreferrer">
+              <img src={`${base}images/interface/vk-icon.svg`} alt="vk" />
+            </a>
+            <a href="https://t.me" target="_blank" rel="noreferrer">
+              <img src={`${base}images/interface/tg-icon.svg`} alt="tg" />
+            </a>
+          </div>
+        </div>
+
+        <div className="footer-block action-block">
+          <button className="back-to-top-btn" onClick={scrollToTop}>
+            Вернуться наверх
+            <img src={`${base}images/interface/arrow-up.svg`} alt="" className="btn-icon" />
+          </button>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Section5;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section6\Section6.css
+================================================================================
+section.section-6 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 100px 0;
+  /* Зеленый фон на всю секцию */
+  background-color: var(--green-color); 
+}
+
+section.section-6 .section-6-container {
+  width: calc(100% - 292px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+section.section-6 .section-6-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin-bottom: 80px;
+}
+
+section.section-6 .section-6-main-logo {
+  width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+section.section-6 .section-6-header-h1 {
+  /* Сдвигаем весь контейнер заголовка вправо */
+  margin-left: 16px; 
+}
+
+section.section-6 .section-6-header-h1 h1 {
+  font-weight: 700;
+  font-size: 46px; /* Твой размер */
+  margin: 0;
+  color: white;
+  text-align: left;
+  line-height: 1.1;
+}
+
+/* Грид с 4 боксами */
+section.section-6 .section-6-horizontal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+  align-items: stretch;
+}
+
+/* Бокс */
+section.section-6 .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрирование контента внутри бокса */
+  text-align: center;
+}
+
+/* Контейнер для иконок (star, student и т.д.) */
+section.section-6 .logo-container {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.section-6 .logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Заголовки карточек */
+section.section-6 .speciality-container {
+  font-weight: 700;
+  font-size: 36px;
+  color: white; /* Текст белый */
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Описание */
+section.section-6 .info-container {
+  font-weight: 400;
+  font-size: 20px;
+  color: white; /* Текст белый */
+  line-height: 1.5;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section6\Section6.css
+================================================================================
+section.section-6 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 100px 0;
+  /* Зеленый фон на всю секцию */
+  background-color: var(--green-color); 
+}
+
+section.section-6 .section-6-container {
+  width: calc(100% - 292px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+section.section-6 .section-6-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin-bottom: 80px;
+}
+
+section.section-6 .section-6-main-logo {
+  width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+section.section-6 .section-6-header-h1 {
+  /* Сдвигаем весь контейнер заголовка вправо */
+  margin-left: 16px; 
+}
+
+section.section-6 .section-6-header-h1 h1 {
+  font-weight: 700;
+  font-size: 46px; /* Твой размер */
+  margin: 0;
+  color: white;
+  text-align: left;
+  line-height: 1.1;
+}
+
+/* Грид с 4 боксами */
+section.section-6 .section-6-horizontal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+  align-items: stretch;
+}
+
+/* Бокс */
+section.section-6 .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрирование контента внутри бокса */
+  text-align: center;
+}
+
+/* Контейнер для иконок (star, student и т.д.) */
+section.section-6 .logo-container {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.section-6 .logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Заголовки карточек */
+section.section-6 .speciality-container {
+  font-weight: 700;
+  font-size: 36px;
+  color: white; /* Текст белый */
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Описание */
+section.section-6 .info-container {
+  font-weight: 400;
+  font-size: 20px;
+  color: white; /* Текст белый */
+  line-height: 1.5;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section6\Section6.tsx
+================================================================================
+import './Section6.css';
+
+const Section6 = () => {
+  const base = import.meta.env.BASE_URL;
+
+  const boxes = [
+    {
+      icon: "star.svg",
+      speciality: "Флористов",
+      info: "Найти новый источник вдохновения для быстрого создания и планирования будущего букета"
+    },
+    {
+      icon: "student.svg",
+      speciality: "Новичков",
+      info: "Дополнить классическое обучение цифровой практикой без траты материалов и побороть страх перед первым букетом"
+    },
+    {
+      icon: "book.svg",
+      speciality: "Преподавателей",
+      info: "Помочь ученикам практиковаться не только на курсах, но и дома"
+    },
+    {
+      icon: "heart.svg",
+      speciality: "Любителей",
+      info: "Расслабиться и приятно провести время, попробовать собрать букет и отправить его близким"
+    }
+  ];
+
+  return (
+    <section className="section-6">
+      <div className="section-6-container">
+        <div className="section-6-header-wrapper">
+          <img src={`${base}images/interface/logo2.svg`} alt="logo" className="section-6-main-logo" />
+          <div className="section-6-header-h1">
+            <h1>удобный инструмент для</h1>
+          </div>
+        </div>
+        
+        <div className="section-6-horizontal-grid">
+          {boxes.map((box, index) => (
+            <div className="box" key={index}>
+              <div className="logo-container">
+                <img src={`${base}images/interface/${box.icon}`} alt={box.speciality} />
+              </div>
+              <div className="speciality-container">{box.speciality}</div>
+              <div className="info-container">{box.info}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Section6;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\components\PageSections\Section6\Section6.tsx
+================================================================================
+import './Section6.css';
+
+const Section6 = () => {
+  const base = import.meta.env.BASE_URL;
+
+  const boxes = [
+    {
+      icon: "star.svg",
+      speciality: "Флористов",
+      info: "Найти новый источник вдохновения для быстрого создания и планирования будущего букета"
+    },
+    {
+      icon: "student.svg",
+      speciality: "Новичков",
+      info: "Дополнить классическое обучение цифровой практикой без траты материалов и побороть страх перед первым букетом"
+    },
+    {
+      icon: "book.svg",
+      speciality: "Преподавателей",
+      info: "Помочь ученикам практиковаться не только на курсах, но и дома"
+    },
+    {
+      icon: "heart.svg",
+      speciality: "Любителей",
+      info: "Расслабиться и приятно провести время, попробовать собрать букет и отправить его близким"
+    }
+  ];
+
+  return (
+    <section className="section-6">
+      <div className="section-6-container">
+        <div className="section-6-header-wrapper">
+          <img src={`${base}images/interface/logo2.svg`} alt="logo" className="section-6-main-logo" />
+          <div className="section-6-header-h1">
+            <h1>удобный инструмент для</h1>
+          </div>
+        </div>
+        
+        <div className="section-6-horizontal-grid">
+          {boxes.map((box, index) => (
+            <div className="box" key={index}>
+              <div className="logo-container">
+                <img src={`${base}images/interface/${box.icon}`} alt={box.speciality} />
+              </div>
+              <div className="speciality-container">{box.speciality}</div>
+              <div className="info-container">{box.info}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Section6;
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\index.css
+================================================================================
+
+--------------------------------------------------------------------------------
+
+Файл: C:\Users\Дом\Desktop\Лендинг\my-react-app\src\main.tsx
+================================================================================
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App.tsx'
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+
+--------------------------------------------------------------------------------
+
