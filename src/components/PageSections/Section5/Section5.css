@@ -1,69 +1,110 @@
 section.section-5 {
   width: 100%;
-  min-height: 100vh;
-  position: relative;
-}
-
-section.section-5 .section-5-container {
-  position: absolute;
-  width: calc(100% - 100px);
-  height: 390px;
-  left: 50px;
-  border-radius: 64px;
-  background-color: #F6FFDD;
+  background-color: var(--green-color);
+  padding: 120px 0 80px 0;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Изменено с center на flex-start */
-  align-items: center;
-}
-
-section.section-5 .header-container {
-  width: 792px;
-  height: 150px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  margin-bottom: 40px;
-  margin-top: 40px; /* Добавлен отступ сверху */
-}
-section.section-5 .header-container h1 {
-  font-weight: 700;
-  font-size: 64px;
-  margin: 0;
-  line-height: 1.2;
-  color: var(--green-color);
-}
-
-/* Кнопки */
-section.section-5 .download-and-demo-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-/* Стили кнопок из Header.css */
-section.section-5 .green-button,
-section.section-5 .outline-button {
-  height: 70px;
-  border-radius: 24px;
-  cursor: pointer;
-  font-size: 24px;
-  font-weight: 500;
-  font-family: inherit;
+  margin-top: -1px;
   border: none;
 }
 
-section.section-5 .green-button {
-  width: 373px;
-  background: var(--green-color);
-  color: white;
+section.section-6 {
+  margin-bottom: 0 !important;
+  padding-bottom: 100px;
 }
 
-section.section-5 .outline-button {
-  width: 400px; /* Немного шире для длинного текста */
-  background: transparent;
-  border: 2px solid var(--green-color);
+section.section-5 .section-5-content-container {
+  width: calc(100% - 292px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 400px;
+  height: auto;
+}
+
+.navigation-block {
+  gap: 48px;
+  margin-top: 50px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  transition: transform 0.2s ease;
+}
+
+.nav-links button:hover {
+  transform: scale(1.05);
+}
+
+.social-container {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.social-container a {
+  display: flex;
+  transition: transform 0.2s ease;
+}
+
+.social-container a:hover {
+  transform: scale(1.1);
+}
+
+.social-container img {
+  width: 60px;
+  height: 60px;
+}
+
+.action-block {
+  align-items: flex-end;
+}
+
+.back-to-top-btn {
+  background-color: white;
   color: var(--green-color);
+  padding: 18px 36px;
+  border-radius: 24px;
+  font-size: 36px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.2s ease;
+}
+
+.back-to-top-btn:hover {
+  transform: scale(1.05);
+}
+
+.back-to-top-btn .btn-icon {
+  width: 32px;
+  height: 32px;
+  display: block;
 }

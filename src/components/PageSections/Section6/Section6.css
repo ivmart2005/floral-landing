@@ -3,6 +3,8 @@ section.section-6 {
   min-height: 100vh;
   position: relative;
   padding: 100px 0;
+  /* Зеленый фон на всю секцию */
+  background-color: var(--green-color); 
 }
 
 section.section-6 .section-6-container {
@@ -12,60 +14,82 @@ section.section-6 .section-6-container {
   flex-direction: column;
 }
 
-/* Заголовок */
+section.section-6 .section-6-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin-bottom: 80px;
+}
+
+section.section-6 .section-6-main-logo {
+  width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
 section.section-6 .section-6-header-h1 {
-  width: 100%;
-  margin-bottom: 60px;
+  /* Сдвигаем весь контейнер заголовка вправо */
+  margin-left: 16px; 
 }
 
 section.section-6 .section-6-header-h1 h1 {
   font-weight: 700;
-  font-size: 96px; /* было 64px */
+  font-size: 46px; /* Твой размер */
   margin: 0;
+  color: white;
   text-align: left;
+  line-height: 1.1;
 }
 
 /* Грид с 4 боксами */
 section.section-6 .section-6-horizontal-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  align-items: stretch; /* боксы растягиваются по высоте */
+  gap: 60px;
+  align-items: stretch;
 }
 
 /* Бокс */
 section.section-6 .box {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Центрирование контента внутри бокса */
   text-align: center;
-  padding: 0;
-  /* Убрал background-color и border-radius */
 }
 
-/* Логотип */
+/* Контейнер для иконок (star, student и т.д.) */
 section.section-6 .logo-container {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Специальность - прижата к верху */
+section.section-6 .logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Заголовки карточек */
 section.section-6 .speciality-container {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 36px;
-  color: var(--green-color);
-  margin-bottom: 15px;
+  color: white; /* Текст белый */
+  margin-bottom: 20px;
   line-height: 1.2;
 }
 
-/* Информация - занимает оставшееся пространство */
+/* Описание */
 section.section-6 .info-container {
   font-weight: 400;
   font-size: 20px;
-  color: black;
-  line-height: 1.4;
-  flex: 1; /* занимает все доступное пространство снизу */
+  color: white; /* Текст белый */
+  line-height: 1.5;
+  flex: 1;
   display: flex;
-  align-items: flex-start; /* текст начинается сверху */
+  align-items: flex-start;
+  justify-content: center;
 }

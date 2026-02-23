@@ -3,6 +3,7 @@ section.section-2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 
 section.section-2 .centered-container {
@@ -20,6 +21,8 @@ section.section-2 .h1-container h1 {
   font-weight: 700;
   font-size: 64px;
   margin: 0;
+  color: var(--green-color);
+  line-height: 110%;
 }
 
 section.section-2 .flex-container {
@@ -28,16 +31,33 @@ section.section-2 .flex-container {
 }
 
 section.section-2 .box {
-  height: 240px; /* высота 240px */
+  height: 240px;
   border-radius: 48px;
-  padding: 10px 24px;
+  padding: 60px 24px 20px 24px;
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; 
   background-color: white;
-  box-shadow: 0px 4px 44.3px 0px rgba(0, 0, 0, 0.05);
+  border: 5px solid var(--green-color);
+  box-shadow: none;
+  color: var(--green-color);
+}
+
+.box-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-bottom: 20px; 
+}
+
+.box-text {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 30px;
   text-align: center;
+  line-height: 120%;
+  margin: 0;
+  display: block; 
 }

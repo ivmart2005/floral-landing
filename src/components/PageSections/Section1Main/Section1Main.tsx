@@ -1,20 +1,34 @@
 import './Section1Main.css';
 
 const Section1Main = () => {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <section className="section-1-main">
+      <div className="background-flower-wrapper">
+        <img
+          src={`${base}images/interface/transparent-flower.svg`}
+          className="bg-flower-img"
+          alt=""
+        />
+      </div>
+
       <div className="section-1-container">
         <div className="text-container">
-          <div className="h1-container">
-            <h1>Визуализируйте идеи до того, как возьмете в руки первый цветок</h1>
-          </div>
-          <div className="h2-container">
-            <h2>Создавайте, экспериментируйте и показывайте клиентам идеальные букеты в цифровом виде. Экономьте время и материалы, повышайте конверсию заказов.</h2>
-          </div>
+          <h1>Визуализируйте идеи до того, как возьмете в руки первый цветок</h1>
+          <h2>Создавайте, экспериментируйте и показывайте клиентам идеальные
+          букеты в цифровом виде. Экономьте время и материалы, повышайте конверсию заказов.</h2>
         </div>
+        
         <div className="download-and-demo-container">
-          <button className="green-button">Скачать на Windows</button>
-          <button className="outline-button">Собрать первый букет онлайн</button>
+          <button className="white-button-green-text">
+            Скачать на Windows
+            <img src={`${base}images/interface/download-icon.svg`} className="btn-icon" alt="" />
+          </button>
+          <button className="white-button-green-text">
+            Собрать первый букет онлайн
+            <img src={`${base}images/interface/round-arrow.svg`} className="btn-icon" alt="" />
+          </button>
         </div>
       </div>
     </section>

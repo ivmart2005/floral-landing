@@ -1,85 +1,113 @@
 .section-1-main {
   position: relative;
   width: 100%;
-  min-height: 100vh; /* чтобы секция была на весь экран */
+  min-height: 140vh; 
+  background-color: var(--green-color);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-flower-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-flower-img {
+  width: 100%;
+  height: auto;
+  transform: rotate(30deg);
+  object-fit: cover;
+  opacity: 0.6;
+  filter: brightness(1.8) contrast(1.1);
 }
 
 .section-1-container {
-  top: 168px;
-  position: absolute;
-  width: 1374px;
-  height: 397px;
-  left: 146px;
+  position: relative;
+  z-index: 1;
+  max-width: 1374px;
+  width: calc(100% - 292px);
   display: flex;
   flex-direction: column;
-  gap: 55px;
+  align-items: center;
+  text-align: center;
+  gap: 60px;
 }
 
 .text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 100%;
-  height: 272px;
-  background: transparent;
+}
+
+.text-container h1 {
+  color: white;
+  margin: 0;
+  line-height: 1.1;
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.text-container h2 {
+  color: white;
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 300;
+  font-size: 32px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .download-and-demo-container {
   display: flex;
-  gap: 20px;
-  height: 70px;
-  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* Кнопки идентичные хедеру */
-.download-and-demo-container .green-button,
-.download-and-demo-container .outline-button {
-  height: 70px;
+.white-button-green-text {
+  height: 75px;
   border-radius: 24px;
   cursor: pointer;
   font-size: 24px;
   font-weight: 500;
   border: none;
-}
-
-.download-and-demo-container .green-button {
-  width: 373px;
-  background: var(--green-color);
-  color: white;
-}
-
-.download-and-demo-container .outline-button {
-  width: 495px;
-  background: transparent;
-  border: 2px solid var(--green-color);
+  background-color: white;
   color: var(--green-color);
-}
-
-.text-container {
-  width: 100%;
-  height: 272px;
+  padding: 0 35px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: transform 0.2s ease;
 }
 
-.h1-container {
-  padding: 10px 0;
+.white-button-green-text:hover {
+  transform: scale(1.05);
 }
 
-.h1-container h1 {
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 100%;
-  letter-spacing: 0;
-  margin: 0;
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
-.h2-container {
-  padding: 10px 0;
+.download-and-demo-container button:nth-child(1) {
+  width: 373px;
 }
 
-.h2-container h2 {
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 100%;
-  letter-spacing: 0;
-  margin: 0;
+.download-and-demo-container button:nth-child(2) {
+  width: 495px;
 }

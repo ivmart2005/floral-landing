@@ -1,6 +1,8 @@
 import './Section2Main.css';
 
 const Section2 = () => {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <section className="section-2">
       <div className="centered-container">
@@ -11,16 +13,30 @@ const Section2 = () => {
             и объяснения?
           </h1>
         </div>
-        
         <div className="flex-container">
           <div className="box">
-            Клиент говорит «хочу что-то нежное» – и вы тратите полдня на подбор и эскизы
+            <img 
+              src={`${base}images/interface/client-svg.svg`} 
+              className="box-icon" 
+              alt="" 
+            />
+            <span className="box-text">Клиент говорит «хочу что-то нежное» – и вы тратите полдня на подбор и эскизы</span>
           </div>
           <div className="box">
-            Жалко выбрасывать цветы после неудачного эксперимента с композицией
+            <img 
+              src={`${base}images/interface/rubbish-bin.svg`} 
+              className="box-icon" 
+              alt="" 
+            />
+            <span className="box-text">Жалко выбрасывать цветы после неудачного эксперимента с композицией</span>
           </div>
           <div className="box">
-            На подбор референсов уходит слишком много времени
+            <img 
+              src={`${base}images/interface/clock.svg`} 
+              className="box-icon" 
+              alt="" 
+            />
+            <span className="box-text">На подбор референсов уходит слишком много времени</span>
           </div>
         </div>
       </div>

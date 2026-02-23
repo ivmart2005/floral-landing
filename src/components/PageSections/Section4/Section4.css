@@ -1,11 +1,13 @@
 section.section-4 {
-  min-height: 200vh;
+  min-height: 100vh;
   padding-bottom: 200px;
+  position: relative;
+  overflow: hidden; 
 }
 
 section.section-4 .section-4-content-container {
-  width: calc(100% - 292px);
-  margin: 520px auto 0;
+  width: calc(100% - 460px);
+  margin: 174px auto 0;
   display: flex;
   flex-direction: column;
 }
@@ -17,15 +19,39 @@ section.section-4 .section-4-header-container {
 section.section-4 .section-4-header-container h1 {
   font-size: 64px;
   line-height: 1.2;
+  color: var(--green-color);
+  font-weight: 700;
+  margin: 0;
+}
+
+.carousel-wrapper {
+  position: relative !important;
+  width: 100%;
+  z-index: 1;
+}
+
+.bg-flower-corner {
+  position: absolute !important;
+  top: -320px;    
+  right: -180px;  
+  width: 800px; 
+  height: auto;
+  transform: rotate(-30deg);
+  z-index: 1; 
+  pointer-events: none;
+  display: block;
 }
 
 section.section-4 .section-4-carousel-container {
-  height: 500px;
+  height: 600px;
   border-radius: 64px;
-  box-shadow: 0px 14px 35px 3px rgba(0, 0, 0, 0.08);
-  background-color: white;
+  border: 7px solid var(--green-color);
+  background-color: #FFFFFF;
   padding: 60px 0;
   position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
 }
 
 section.section-4 .section-4-block-container {
@@ -35,6 +61,16 @@ section.section-4 .section-4-block-container {
   display: flex;
   gap: 48px;
   align-items: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0.2; 
+  }
+  to { 
+    opacity: 1; 
+  }
 }
 
 section.section-4 .picture-container {
@@ -52,25 +88,27 @@ section.section-4 .info-container {
   flex-direction: column;
   justify-content: center;
   gap: 28px;
+  color: #000;
 }
 
 section.section-4 .info-container-header {
+  font-weight: 700;
   font-size: 32px;
+  line-height: 1.2;
 }
 
 section.section-4 .info-container-text {
   font-weight: 300;
   font-size: 24px;
+  line-height: 1.4;
 }
 
-@keyframes fade {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+section.section-4 .info-container-text p {
+  margin: 0;
 }
 
-.info-container-header,
-.info-container-text {
-  animation: fade 0.7s ease;
+section.section-4 .info-container-text p:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .carousel-arrow {
@@ -83,7 +121,18 @@ section.section-4 .info-container-text {
   border: none;
   cursor: pointer;
   z-index: 10;
+  transition: transform 0.2s ease, opacity 0.2s;
 }
+
+.carousel-arrow:hover {
+  opacity: 0.7;
+}
+
+.carousel-arrow-left:active { transform: translateY(-50%) scale(0.9) translateX(-5px); }
+.carousel-arrow-right:active { transform: translateY(-50%) scale(0.9) translateX(5px); }
+
+.carousel-arrow-left { left: 40px; }
+.carousel-arrow-right { right: 40px; }
 
 .carousel-arrow-left::before,
 .carousel-arrow-right::before {
@@ -93,28 +142,22 @@ section.section-4 .info-container-text {
   height: 40px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
+  transition: border-color 0.2s;
 }
 
 .carousel-arrow-left::before {
   border-left: 8px solid var(--green-color);
   border-bottom: 8px solid var(--green-color);
+  transform: translate(-50%, -50%) rotate(45deg);
   border-radius: 0 0 0 12px;
 }
 
 .carousel-arrow-right::before {
   border-right: 8px solid var(--green-color);
   border-top: 8px solid var(--green-color);
+  transform: translate(-50%, -50%) rotate(45deg);
   border-radius: 0 12px 0 0;
 }
-
-.carousel-arrow:hover::before {
-  border-color: #16a34a;
-  transform: translate(-50%, -50%) rotate(45deg) scale(1.1);
-}
-
-.carousel-arrow-left { left: 40px; }
-.carousel-arrow-right { right: 40px; }
 
 .carousel-indicators {
   display: flex;
@@ -130,17 +173,11 @@ section.section-4 .info-container-text {
   background-color: #D9D9D9;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
+
+.carousel-indicator:hover { transform: scale(1.2); }
 
 .carousel-indicator.active {
   background-color: var(--green-color);
-}
-
-.carousel-indicator:hover {
-  background-color: #b8b8b8;
-}
-
-.carousel-indicator.active:hover {
-  background-color: #16a34a;
 }
