@@ -30,7 +30,7 @@ Deploy-job:
     - shell
   variables:
     USER_NAME: "iamartemianov"
-    DEPLOY_PATH: "/var/www/html/floral-landing"
+    DEPLOY_PATH: "/home/gitlab-runner/floral-landing"
   script:
     - echo "Deploying project by $USER_NAME"
     - mkdir -p $DEPLOY_PATH
