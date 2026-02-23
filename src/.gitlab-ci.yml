@@ -1,0 +1,37 @@
+stages:
+  - build
+  - test
+  - deploy
+
+Build-job:
+  stage: build
+  tags:
+    - docker # тэг из  devops_project/-/settings/ci_cd
+  image: node:20
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+Test-job:
+  stage: test
+  tags:
+    - docker
+  image: node:20
+  script:
+    - npm install
+    - npm run lint
+
+Deploy-job:
+  stage: deploy
+  tags:
+    - shell
+  variables:
+    USER_NAME: "iamartemianov"
+    DEPLOY_PATH: "/var/www/html/floral-landing"
+  script:
+    - echo "Deploying project by $USER_NAME"
+    - mkdir -p $DEPLOY_PATH
+    - cp -r dist/* $DEPLOY_PATH
