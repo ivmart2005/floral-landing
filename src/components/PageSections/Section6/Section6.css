@@ -7,7 +7,7 @@ section.section-6 {
 }
 
 section.section-6 .section-6-container {
-  width: calc(100% - 204.4px);
+  width: calc(100% - 200px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -105,8 +105,8 @@ section.section-6 .info-container {
   }
 
   section.section-6 .section-6-header-wrapper {
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
   }
 
   section.section-6 .section-6-header-h1 {
@@ -115,5 +115,9 @@ section.section-6 .info-container {
 
   section.section-6 .section-6-main-logo {
     width: 200px;
+  }
+
+  section.section-6 .section-6-header-h1 h1 {
+    font-size: 20px;
   }
 }

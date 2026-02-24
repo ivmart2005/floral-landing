@@ -17,7 +17,7 @@ section.section-4 .section-4-header-container {
 }
 
 section.section-4 .section-4-header-container h1 {
-  font-size: 44.8px;
+  font-size: 45px;
   line-height: 1.2;
   color: var(--green-color);
   font-weight: 700;
@@ -163,13 +163,22 @@ section.section-4 .info-container-text p:not(:last-child) {
   background-color: var(--green-color);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   section.section-4 .section-4-content-container {
     width: calc(100% - 80px);
   }
+
+  section.section-4 .picture-container {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  section.section-4 .section-4-header-container h1 {
+    font-size: 30px;
+  }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   section.section-4 .section-4-carousel-container {
     height: auto;
     padding: 30px 0;
@@ -177,7 +186,7 @@ section.section-4 .info-container-text p:not(:last-child) {
   
   section.section-4 .section-4-block-container {
     flex-direction: column;
-    width: calc(100% - 120px);
+    width: calc(100% - 30px);
     text-align: center;
     gap: 20px;
   }
@@ -187,11 +196,44 @@ section.section-4 .info-container-text p:not(:last-child) {
     width: 100%;
   }
 
-  section.section-4 .carousel-arrow {
-    width: 40px;
-    height: 40px;
+  section.section-4 .section-4-header-container h1 {
+    font-size: 18px;
   }
-  
-  section.section-4 .carousel-arrow-left { left: 10px; }
-  section.section-4 .carousel-arrow-right { right: 10px; }
+
+  section.section-4 .info-container-text {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  section.section-4 .info-container-header {
+    position: relative;
+    font-size: 14px;
+    padding: 0 20px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section.section-4 .carousel-arrow {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 320px; 
+  }
+
+  section.section-4 .carousel-arrow-left {
+    left: 20px;
+  }
+
+  section.section-4 .carousel-arrow-right {
+    right: 20px;
+  }
+
+  section.section-4 .carousel-arrow::before {
+    width: 14px;
+    height: 14px;
+    border-width: 5px;
+  }
 }
