@@ -6,7 +6,7 @@ stages:
 Build-job:
   stage: build
   tags:
-    - docker # тэг из  devops_project/-/settings/ci_cd
+    - docker # тэг из devops_project/-/settings/ci_cd
   image: node:20
   script:
     - npm install
