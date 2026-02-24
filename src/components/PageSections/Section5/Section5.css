@@ -1,7 +1,7 @@
 section.section-5 {
   width: 100%;
   background-color: var(--green-color);
-  padding: 120px 0 80px 0;
+  padding: 84px 0 56px 0;
   display: flex;
   justify-content: center;
   margin-top: -1px;
@@ -9,12 +9,12 @@ section.section-5 {
 }
 
 section.section-6 {
-  margin-bottom: 0 !important;
-  padding-bottom: 100px;
+  margin-bottom: 0;
+  padding-bottom: 70px;
 }
 
 section.section-5 .section-5-content-container {
-  width: calc(100% - 292px);
+  width: calc(100% - 204.4px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,19 +27,19 @@ section.section-5 .section-5-content-container {
 }
 
 .footer-logo {
-  width: 400px;
+  width: 280px;
   height: auto;
 }
 
 .navigation-block {
-  gap: 48px;
-  margin-top: 50px;
+  gap: 33.6px;
+  margin-top: 35px;
 }
 
 .nav-links {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16.8px;
   align-items: flex-start;
 }
 
@@ -47,7 +47,7 @@ section.section-5 .section-5-content-container {
   background: none;
   border: none;
   color: white;
-  font-size: 24px;
+  font-size: 16.8px;
   font-weight: 700;
   cursor: pointer;
   padding: 0;
@@ -61,7 +61,7 @@ section.section-5 .section-5-content-container {
 
 .social-container {
   display: flex;
-  gap: 24px;
+  gap: 16.8px;
   align-items: center;
 }
 
@@ -75,8 +75,8 @@ section.section-5 .section-5-content-container {
 }
 
 .social-container img {
-  width: 60px;
-  height: 60px;
+  width: 42px;
+  height: 42px;
 }
 
 .action-block {
@@ -86,16 +86,16 @@ section.section-5 .section-5-content-container {
 .back-to-top-btn {
   background-color: white;
   color: var(--green-color);
-  padding: 18px 36px;
-  border-radius: 24px;
-  font-size: 36px;
+  padding: 12.6px 25.2px;
+  border-radius: 16.8px;
+  font-size: 25.2px;
   font-weight: 700;
   border: none;
   cursor: pointer;
   font-family: inherit;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10.5px;
   transition: transform 0.2s ease;
 }
 
@@ -104,7 +104,36 @@ section.section-5 .section-5-content-container {
 }
 
 .back-to-top-btn .btn-icon {
-  width: 32px;
-  height: 32px;
+  width: 22.4px;
+  height: 22.4px;
   display: block;
+}
+
+@media (max-width: 1024px) {
+  section.section-5 .section-5-content-container {
+    width: calc(100% - 80px);
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .nav-links {
+    align-items: center;
+  }
+
+  .action-block {
+    align-items: center;
+  }
+
+  .footer-logo {
+    width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-to-top-btn {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
 }

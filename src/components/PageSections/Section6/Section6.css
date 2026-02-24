@@ -1,14 +1,13 @@
 section.section-6 {
   width: 100%;
-  min-height: 100vh;
+  min-height: 70vh;
   position: relative;
-  padding: 100px 0;
-  /* Зеленый фон на всю секцию */
+  padding: 70px 0;
   background-color: var(--green-color); 
 }
 
 section.section-6 .section-6-container {
-  width: calc(100% - 292px);
+  width: calc(100% - 204.4px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -18,50 +17,46 @@ section.section-6 .section-6-header-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start; 
-  margin-bottom: 80px;
+  margin-bottom: 56px;
 }
 
 section.section-6 .section-6-main-logo {
-  width: 400px;
+  width: 280px;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 section.section-6 .section-6-header-h1 {
-  /* Сдвигаем весь контейнер заголовка вправо */
-  margin-left: 16px; 
+  margin-left: 11.2px; 
 }
 
 section.section-6 .section-6-header-h1 h1 {
   font-weight: 700;
-  font-size: 46px; /* Твой размер */
+  font-size: 32.2px;
   margin: 0;
   color: white;
   text-align: left;
   line-height: 1.1;
 }
 
-/* Грид с 4 боксами */
 section.section-6 .section-6-horizontal-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 60px;
+  gap: 42px;
   align-items: stretch;
 }
 
-/* Бокс */
 section.section-6 .box {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Центрирование контента внутри бокса */
+  align-items: center;
   text-align: center;
 }
 
-/* Контейнер для иконок (star, student и т.д.) */
 section.section-6 .logo-container {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 30px;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 21px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,23 +68,52 @@ section.section-6 .logo-container img {
   object-fit: contain;
 }
 
-/* Заголовки карточек */
 section.section-6 .speciality-container {
   font-weight: 700;
-  font-size: 36px;
-  color: white; /* Текст белый */
-  margin-bottom: 20px;
+  font-size: 25.2px;
+  color: white;
+  margin-bottom: 14px;
   line-height: 1.2;
 }
 
-/* Описание */
 section.section-6 .info-container {
   font-weight: 400;
-  font-size: 20px;
-  color: white; /* Текст белый */
+  font-size: 14px;
+  color: white;
   line-height: 1.5;
   flex: 1;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  section.section-6 .section-6-horizontal-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  section.section-6 .section-6-container {
+    width: calc(100% - 40px);
+  }
+
+  section.section-6 .section-6-horizontal-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  section.section-6 .section-6-header-wrapper {
+    align-items: center;
+    text-align: center;
+  }
+
+  section.section-6 .section-6-header-h1 {
+    margin-left: 0;
+  }
+
+  section.section-6 .section-6-main-logo {
+    width: 200px;
+  }
 }

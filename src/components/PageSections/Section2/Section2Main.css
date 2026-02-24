@@ -1,25 +1,26 @@
 section.section-2 {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
+  padding: 40px 0;
 }
 
 section.section-2 .centered-container {
-  width: calc(100% - 292px);
+  width: calc(100% - 204.4px);
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 section.section-2 .h1-container {
-  margin-bottom: 80px;
+  margin-bottom: 56px;
 }
 
 section.section-2 .h1-container h1 {
   font-weight: 700;
-  font-size: 64px;
+  font-size: 44.8px;
   margin: 0;
   color: var(--green-color);
   line-height: 110%;
@@ -27,37 +28,67 @@ section.section-2 .h1-container h1 {
 
 section.section-2 .flex-container {
   display: flex;
-  gap: 100px;
+  gap: 70px;
 }
 
 section.section-2 .box {
-  height: 240px;
-  border-radius: 48px;
-  padding: 60px 24px 20px 24px;
+  height: 168px;
+  border-radius: 33.6px;
+  padding: 42px 16.8px 14px 16.8px;
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; 
   background-color: white;
-  border: 5px solid var(--green-color);
+  border: 3.5px solid var(--green-color);
   box-shadow: none;
   color: var(--green-color);
 }
 
 .box-icon {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   object-fit: contain;
   flex-shrink: 0;
-  margin-bottom: 20px; 
+  margin-bottom: 14px; 
 }
 
 .box-text {
   font-weight: 400;
-  font-size: 30px;
+  font-size: 21px;
   text-align: center;
   line-height: 120%;
   margin: 0;
   display: block; 
+}
+
+@media (max-width: 1024px) {
+  section.section-2 .flex-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  section.section-2 .centered-container {
+    width: calc(100% - 40px);
+    margin-top: 40px;
+  }
+
+  section.section-2 .h1-container h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  section.section-2 .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.section-2 .box {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    min-height: 140px;
+  }
 }
