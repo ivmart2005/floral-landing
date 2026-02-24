@@ -6,11 +6,17 @@ const Section1Main = () => {
   return (
     <section className="section-1-main">
       <div className="background-flower-wrapper">
-        <img
-          src={`${base}images/interface/transparent-flower.svg`}
-          className="bg-flower-img"
-          alt=""
-        />
+        <picture>
+          <source 
+            media="(max-width: 768px)" 
+            srcSet={`${base}images/interface/transparent-flower-mobile.svg`} 
+          />
+          <img
+            src={`${base}images/interface/transparent-flower.svg`}
+            className="bg-flower-img"
+            alt=""
+          />
+        </picture>
       </div>
 
       <div className="section-1-container">
