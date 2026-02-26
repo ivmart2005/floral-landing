@@ -27,11 +27,16 @@ const Section1Main = () => {
         </div>
         
         <div className="download-and-demo-container">
-          <button className="white-button-green-text">
+          <button 
+            className="white-button-green-text"
+          >
             Скачать на Windows
             <img src={`${base}images/interface/download-icon.svg`} className="btn-icon" alt="" />
           </button>
-          <button className="white-button-green-text">
+          <button 
+            className="white-button-green-text"
+            onClick={() => window.open('https://ivmart2005.github.io/buton-demo/', '_blank')}
+          >
             Собрать первый букет онлайн
             <img src={`${base}images/interface/round-arrow.svg`} className="btn-icon" alt="" />
           </button>

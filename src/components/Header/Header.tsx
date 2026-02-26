@@ -46,7 +46,10 @@ const Header = () => {
               Скачать на Windows
               <img src={`${base}images/interface/download-icon-white.svg`} alt="" className="btn-icon" />
             </button>
-            <button className="outline-button">
+            <button 
+              className="outline-button"
+              onClick={() => window.open('https://ivmart2005.github.io/buton-demo/', '_blank')}
+            >
               Попробовать
               <img src={`${base}images/interface/round-arrow.svg`} alt="" className="btn-icon" />
             </button>
