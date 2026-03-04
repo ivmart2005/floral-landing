@@ -11,7 +11,7 @@ const App = () => {
   return (
     <>
       <Header/>
-      <Section1Main />
+      <Section1Main/>
       <Section2 />
       <Section3 />
       <Section4 />
