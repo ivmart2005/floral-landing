@@ -1,4 +1,5 @@
 import './Section1Main.css';
+import { metrikaClick } from '../../../utils/metrika';
 
 const Section1Main = () => {
   const base = import.meta.env.BASE_URL;
@@ -29,13 +30,16 @@ const Section1Main = () => {
         <div className="download-and-demo-container">
           <button 
             className="white-button-green-text"
+            onClick={() => metrikaClick('main_download_win')}
           >
             Скачать на Windows
             <img src={`${base}images/interface/download-icon.svg`} className="btn-icon" alt="" />
           </button>
           <button 
             className="white-button-green-text"
-            onClick={() => window.open('https://ivmart2005.github.io/buton-demo/', '_blank')}
+            onClick={() => {
+              metrikaClick('main_try_demo');
+              window.open('https://ivmart2005.github.io/buton-demo/', '_blank')}}
           >
             Собрать первый букет онлайн
             <img src={`${base}images/interface/round-arrow.svg`} className="btn-icon" alt="" />

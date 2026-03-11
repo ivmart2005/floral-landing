@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Header.css';
+import { metrikaClick } from '../../utils/metrika';
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -42,13 +43,16 @@ const Header = () => {
         
         {!isMobile && (
           <div className="buttons-container">
-            <button className="green-button">
+            <button className="green-button"
+              onClick={() => metrikaClick('header_download_win')}
+            >
               Скачать на Windows
               <img src={`${base}images/interface/download-icon-white.svg`} alt="" className="btn-icon" />
             </button>
             <button 
               className="outline-button"
-              onClick={() => window.open('https://ivmart2005.github.io/buton-demo/', '_blank')}
+              onClick={() => {metrikaClick('header_try_demo');
+                window.open('https://ivmart2005.github.io/buton-demo/', '_blank')}}
             >
               Попробовать
               <img src={`${base}images/interface/round-arrow.svg`} alt="" className="btn-icon" />
