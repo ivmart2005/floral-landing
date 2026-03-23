@@ -1,0 +1,244 @@
+section.section-4 {
+  min-height: 70vh;
+  padding-bottom: 140px;
+  position: relative;
+  overflow: hidden;
+}
+
+section.section-4 .section-4-content-container {
+  width: calc(100% - 322px);
+  margin: 120px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+section.section-4 .section-4-header-container {
+  margin-bottom: 28px;
+}
+
+section.section-4 .section-4-header-container h1 {
+  font-size: 45px;
+  line-height: 1.2;
+  color: var(--green-color);
+  font-weight: 700;
+  margin: 0;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.bg-flower-corner {
+  position: absolute;
+  top: -224px;
+  right: -126px;
+  width: 560px;
+  height: auto;
+  transform: rotate(-30deg);
+  z-index: 1;
+  pointer-events: none;
+  display: block;
+}
+
+section.section-4 .section-4-carousel-container {
+  height: 420px;
+  border-radius: 45px;
+  border: 5px solid var(--green-color);
+  background-color: #ffffff;
+  padding: 42px 0;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+section.section-4 .section-4-block-container {
+  width: calc(100% - 224px);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 34px;
+  align-items: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0.2;}
+  to {opacity: 1;}
+}
+
+section.section-4 .picture-container {
+  width: 100%;
+  max-width: 665px;
+  height: 100%;
+  border-radius: 17px;
+  background-color: #d9d9d9;
+  flex-shrink: 1;
+}
+
+section.section-4 .info-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  color: #000000;
+}
+
+section.section-4 .info-container-header {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+section.section-4 .info-container-text {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+section.section-4 .info-container-text p:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-arrow-left {
+  left: 28px;
+}
+
+.carousel-arrow-right {
+  right: 28px;
+}
+
+.carousel-arrow-left::before,
+.carousel-arrow-right::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: 50%;
+  left: 50%;
+}
+
+.carousel-arrow-left::before {
+  border-left: 5.6px solid var(--green-color);
+  border-bottom: 5.6px solid var(--green-color);
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 0 0 0 8px;
+}
+
+.carousel-arrow-right::before {
+  border-right: 6px solid var(--green-color);
+  border-top: 6px solid var(--green-color);
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 0 8px 0 0;
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  margin-top: 21px;
+}
+
+.carousel-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background-color: var(--green-color);
+}
+
+@media (max-width: 1200px) {
+  section.section-4 .section-4-content-container {
+    width: calc(100% - 80px);
+  }
+
+  section.section-4 .picture-container {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  section.section-4 .section-4-header-container h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  section.section-4 .section-4-carousel-container {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  section.section-4 .section-4-block-container {
+    flex-direction: column;
+    width: calc(100% - 30px);
+    text-align: center;
+    gap: 20px;
+  }
+
+  section.section-4 .picture-container {
+    height: 250px;
+    width: 100%;
+  }
+
+  section.section-4 .section-4-header-container h1 {
+    font-size: 18px;
+  }
+
+  section.section-4 .info-container-text {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  section.section-4 .info-container-header {
+    position: relative;
+    font-size: 14px;
+    padding: 0 20px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section.section-4 .carousel-arrow {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 320px;
+  }
+
+  section.section-4 .carousel-arrow-left {
+    left: 20px;
+  }
+
+  section.section-4 .carousel-arrow-right {
+    right: 20px;
+  }
+
+  section.section-4 .carousel-arrow::before {
+    width: 14px;
+    height: 14px;
+    border-width: 5px;
+  }
+}

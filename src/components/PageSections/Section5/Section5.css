@@ -1,0 +1,139 @@
+section.section-5 {
+  width: 100%;
+  background-color: var(--green-color);
+  padding: 84px 0 56px 0;
+  display: flex;
+  justify-content: center;
+  margin-top: -1px;
+  border: none;
+}
+
+section.section-6 {
+  margin-bottom: 0;
+  padding-bottom: 70px;
+}
+
+section.section-5 .section-5-content-container {
+  width: calc(100% - 204px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 280px;
+  height: auto;
+}
+
+.navigation-block {
+  gap: 34px;
+  margin-top: 35px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  align-items: flex-start;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  transition: transform 0.2s ease;
+}
+
+.nav-links button:hover {
+  transform: scale(1.05);
+}
+
+.social-container {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+
+.social-container a {
+  display: flex;
+  transition: transform 0.2s ease;
+}
+
+.social-container a:hover {
+  transform: scale(1.1);
+}
+
+.social-container img {
+  width: 42px;
+  height: 42px;
+}
+
+.action-block {
+  align-items: flex-end;
+}
+
+.back-to-top-btn {
+  background-color: #ffffff;
+  color: var(--green-color);
+  padding: 13px 25px;
+  border-radius: 17px;
+  font-size: 25px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease;
+}
+
+.back-to-top-btn:hover {
+  transform: scale(1.05);
+}
+
+.back-to-top-btn .btn-icon {
+  width: 22.4px;
+  height: 22.4px;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  section.section-5 .section-5-content-container {
+    width: calc(100% - 80px);
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .nav-links {
+    align-items: center;
+  }
+
+  .action-block {
+    align-items: center;
+  }
+
+  .footer-logo {
+    width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-to-top-btn {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
