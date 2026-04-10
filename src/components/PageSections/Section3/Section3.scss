@@ -1,0 +1,127 @@
+.section-3 {
+  width: 100%;
+  margin-top: 105px;
+  padding: 70px 0 112px;
+  background-color: var(--green-color);
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: calc(100% - 200px);
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+
+    @media (max-width: 1024px) {
+      width: calc(100% - 80px);
+    }
+  }
+
+  &__title-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__title-text {
+    font-weight: 700;
+    font-size: 58px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
+
+  &__title-img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+  }
+
+  &__main-container {
+    display: flex;
+    gap: 16.8px;
+    min-height: 497px;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      min-height: auto;
+    }
+  }
+
+  &__logo-and-text-container {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 42px 0;
+
+    @media (max-width: 768px) {
+      border-radius: 30px;
+    }
+  }
+
+  &__content-container {
+    width: calc(100% - 80px);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    @media (max-width: 768px) {
+      width: calc(100% - 40px);
+      gap: 20px;
+    }
+  }
+
+  &__logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+  }
+
+  &__text-container {
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--green-color);
+    display: block;
+    text-align: left;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  &__picture-container {
+    flex: 1;
+    background-color: #d5d5d5;
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      min-height: 300px;
+      border-radius: 30px;
+    }
+  }
+}

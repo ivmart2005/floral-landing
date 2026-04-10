@@ -1,4 +1,4 @@
-import "./Section6.css";
+import "./Section6.scss";
 
 const Section6 = () => {
   const base = import.meta.env.BASE_URL;
@@ -27,21 +27,28 @@ const Section6 = () => {
 
   return (
     <section className="section-6">
-      <div className="section-6-container">
-        <div className="section-6-header-wrapper">
-          <img src={`${base}images/interface/logo2.svg`} alt="logo" className="section-6-main-logo" />
-          <div className="section-6-header-h1">
-            <h1>удобный инструмент для</h1>
+      <div className="section-6__container">
+        <div className="section-6__header-wrapper">
+          <img
+            className="section-6__main-logo"
+            src={`${base}images/interface/logo2.svg`}
+            alt="logo"
+          />
+          <div className="section-6__title-container">
+            <h1 className="section-6__title">удобный инструмент для</h1>
           </div>
         </div>
-        <div className="section-6-horizontal-grid">
+        <div className="section-6__horizontal-grid">
           {boxes.map((box, index) => (
-            <div className="box" key={index}>
-              <div className="logo-container">
-                <img src={`${base}images/interface/${box.icon}`} alt={box.speciality} />
+            <div className="box section-6__horizontal-grid-box" key={index}>
+              <div className="box__logo-container">
+                <img
+                  className="box__image"
+                  src={`${base}images/interface/${box.icon}`}
+                  alt={box.speciality} />
               </div>
-              <div className="speciality-container">{box.speciality}</div>
-              <div className="info-container">{box.info}</div>
+              <div className="box__speciality">{box.speciality}</div>
+              <div className="box__info">{box.info}</div>
             </div>
           ))}
         </div>

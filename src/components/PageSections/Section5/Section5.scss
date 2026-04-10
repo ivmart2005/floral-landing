@@ -1,0 +1,135 @@
+.section-5 {
+  width: 100%;
+  background-color: var(--green-color);
+  padding: 84px 0 56px 0;
+  display: flex;
+  justify-content: center;
+  margin-top: -1px;
+  border: none;
+
+  &__content-container {
+    width: calc(100% - 204px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media (max-width: 1024px) {
+      width: calc(100% - 80px);
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      text-align: center;
+    }
+  }
+
+  &__logo-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    width: 280px;
+    height: auto;
+    @media (max-width: 1024px) {
+      width: 220px;
+    }
+  }
+
+  &__navigation-block {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    margin-top: 35px;
+    @media (max-width: 1024px) {
+      margin-top: 0;
+      align-items: center;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    align-items: flex-start;
+    @media (max-width: 1024px) {
+      align-items: center;
+    }
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+    transition: transform 0.2s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__social-container {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+  }
+
+  &__social-link {
+    display: flex;
+    transition: transform 0.2s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__social-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  &__action-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media (max-width: 1024px) {
+      align-items: center;
+    }
+  }
+
+  &__back-to-top-btn {
+    background-color: #ffffff;
+    color: var(--green-color);
+    padding: 13px 25px;
+    border-radius: 17px;
+    font-size: 25px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+  }
+
+  &__back-to-top-text {
+    display: block;
+  }
+
+  &__back-to-top-icon {
+    width: 22px;
+    height: 22px;
+    display: block;
+  }
+}

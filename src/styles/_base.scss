@@ -1,0 +1,20 @@
+@use 'variables' as v;
+
+* {
+    font-family: v.$font-main;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+img {
+    pointer-events: none;
+    display: block;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}

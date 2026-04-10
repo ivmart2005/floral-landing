@@ -1,4 +1,4 @@
-import "./Section5.css";
+import "./Section5.scss";
 
 const Section5 = () => {
   const base = import.meta.env.BASE_URL;
@@ -12,35 +12,52 @@ const Section5 = () => {
 
   return (
     <section className="section-5">
-      <div className="section-5-content-container">
-
-        <div className="footer-block logo-block">
-          <img src={`${base}images/interface/logo3.svg`} alt="logo" className="footer-logo" />
+      <div className="section-5__content-container">
+        <div className="section-5__logo-block">
+          <img
+            className="section-5__logo"
+            src={`${base}images/interface/logo3.svg`}
+            alt="logo"
+          />
         </div>
 
-        <div className="footer-block navigation-block">
-          <div className="nav-links">
-            <button onClick={() => scrollToClass("section-3")}>Решение</button>
-            <button onClick={() => scrollToClass("section-4")}>О редакторе</button>
-            <button onClick={() => scrollToClass("section-6")}>Для кого</button>
+        <div className="section-5__navigation-block">
+          <div className="section-5__buttons">
+            <button className="section-5__button" onClick={() => scrollToClass("section-3")}>Решение</button>
+            <button className="section-5__button" onClick={() => scrollToClass("section-4")}>О редакторе</button>
+            <button className="section-5__button" onClick={() => scrollToClass("section-6")}>Для кого</button>
           </div>
-          <div className="social-container">
-            <a href="https://vk.com" target="_blank" rel="noreferrer">
-              <img src={`${base}images/interface/vk-icon.svg`} alt="vk" />
+          <div className="section-5__social-container">
+            <a className="section-5__social-link" href="https://vk.com" target="_blank" rel="noreferrer">
+              <img
+                className="section-5__social-icon"
+                src={`${base}images/interface/vk-icon.svg`}
+                alt="vk"
+              />
             </a>
-            <a href="https://t.me" target="_blank" rel="noreferrer">
-              <img src={`${base}images/interface/tg-icon.svg`} alt="tg" />
+            <a className="section-5__social-link" href="https://t.me" target="_blank" rel="noreferrer">
+              <img
+                className="section-5__social-icon"
+                src={`${base}images/interface/tg-icon.svg`}
+                alt="tg"
+              />
             </a>
           </div>
         </div>
 
-        <div className="footer-block action-block">
-          <button className="back-to-top-btn" onClick={scrollToTop}>
-            Вернуться наверх
-            <img src={`${base}images/interface/arrow-up.svg`} alt="" className="btn-icon" />
+        <div className="section-5__action-block">
+          <button
+            className="section-5__back-to-top-btn"
+            onClick={scrollToTop}
+          >
+            <span className="section-5__back-to-top-text">Вернуться наверх</span>
+            <img
+              className="section-5__back-to-top-icon"
+              src={`${base}images/interface/arrow-up.svg`}
+              alt=""
+            />
           </button>
         </div>
-
       </div>
     </section>
   );
