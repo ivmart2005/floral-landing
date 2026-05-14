@@ -1,15 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Section4.scss";
 
 interface Block {
   title: string;
   text: string[];
   image: string;
+  imageMobile?: string;
 }
 
 const Section4 = () => {
   const [currentBlock, setCurrentBlock] = useState<number>(0);
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 500);
   const base = import.meta.env.BASE_URL;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 500);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const blocks: Block[] = [
     {
       title: "Большой каталог с разными цветами",
@@ -18,6 +29,7 @@ const Section4 = () => {
         "Меняйте ракурсы цветов в один клик, чтобы каждому цветку нашлось место в букете"
       ],
       image: "pic-2.webp",
+      imageMobile: "pic-2-mobile.webp",
     },
     {
       title: "Система фильтрации",
@@ -26,6 +38,7 @@ const Section4 = () => {
         "А с помощью фильтрации по типу вы сможете найти все цветы в каталоге нужного вам вида"
       ],
       image: "pic-3.webp",
+      imageMobile: "pic-3-mobile.webp",
     },
     {
       title: "Удобная настройка цветка",
@@ -38,6 +51,15 @@ const Section4 = () => {
       image: "pic-5.webp",
     }
   ];
+
+  const getImageSrc = () => {
+    const currentImage = blocks[currentBlock].image;
+    const currentImageMobile = blocks[currentBlock].imageMobile;
+    if (isMobile && currentImageMobile) {
+      return `${base}images/content/${currentImageMobile}`;
+    }
+    return `${base}images/content/${currentImage}`;
+  };
 
   const nextBlock = () => setCurrentBlock((prev) => (prev + 1) % blocks.length);
   const prevBlock = () => setCurrentBlock((prev) => (prev - 1 + blocks.length) % blocks.length);
@@ -72,7 +94,7 @@ const Section4 = () => {
               <div className="section-4__carousel-picture">
                 <img
                   className="section-4__carousel-image"
-                  src={`${base}images/content/${blocks[currentBlock].image}`}
+                  src={getImageSrc()}
                   alt={blocks[currentBlock].title}
                 />
               </div>

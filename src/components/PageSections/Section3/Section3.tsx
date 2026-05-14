@@ -1,7 +1,17 @@
+import { useState, useEffect } from "react";
 import "./Section3.scss";
 
 const Section3 = () => {
   const base = import.meta.env.BASE_URL;
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 500);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 500);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section className="section-3">
@@ -35,7 +45,7 @@ const Section3 = () => {
           <div className="section-3__picture-container">
             <img
               className="section-3__picture"
-              src={`${base}images/content/pic-1.webp`}
+              src={isMobile ? `${base}images/content/pic-1-mobile.webp` : `${base}images/content/pic-1.webp`}
               alt=""
             />
           </div>
