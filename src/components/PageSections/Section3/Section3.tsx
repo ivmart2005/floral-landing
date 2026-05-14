@@ -33,7 +33,11 @@ const Section3 = () => {
             </div>
           </div>
           <div className="section-3__picture-container">
-            picture-container (пусто)
+            <img
+              className="section-3__picture"
+              src={`${base}images/content/pic-1.webp`}
+              alt=""
+            />
           </div>
         </div>
       </div>

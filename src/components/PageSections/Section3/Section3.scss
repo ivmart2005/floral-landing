@@ -113,15 +113,23 @@
 
   &__picture-container {
     flex: 1;
-    background-color: #d5d5d5;
+    background-color: #ffffff;
     border-radius: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     @media (max-width: 1024px) {
       min-height: 300px;
       border-radius: 30px;
     }
+  }
+
+  &__picture {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
   }
 }

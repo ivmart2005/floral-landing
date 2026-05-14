@@ -28,14 +28,14 @@ const Section5 = () => {
             <button className="section-5__button" onClick={() => scrollToClass("section-6")}>Для кого</button>
           </div>
           <div className="section-5__social-container">
-            <a className="section-5__social-link" href="https://vk.com" target="_blank" rel="noreferrer">
+            <a className="section-5__social-link" href="https://vk.com/buton_editor" target="_blank" rel="noreferrer">
               <img
                 className="section-5__social-icon"
                 src={`${base}images/interface/vk-icon.svg`}
                 alt="vk"
               />
             </a>
-            <a className="section-5__social-link" href="https://t.me" target="_blank" rel="noreferrer">
+            <a className="section-5__social-link" href="https://t.me/buton_editor" target="_blank" rel="noreferrer">
               <img
                 className="section-5__social-icon"
                 src={`${base}images/interface/tg-icon.svg`}

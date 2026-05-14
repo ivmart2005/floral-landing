@@ -4,10 +4,12 @@ import "./Section4.scss";
 interface Block {
   title: string;
   text: string[];
+  image: string;
 }
 
 const Section4 = () => {
   const [currentBlock, setCurrentBlock] = useState<number>(0);
+  const base = import.meta.env.BASE_URL;
   const blocks: Block[] = [
     {
       title: "Большой каталог с разными цветами",
@@ -15,6 +17,7 @@ const Section4 = () => {
         "Огромная база цветов позволит вам собрать любой букет, который хочется.",
         "Меняйте ракурсы цветов в один клик, чтобы каждому цветку нашлось место в букете"
       ],
+      image: "pic-2.webp",
     },
     {
       title: "Система фильтрации",
@@ -22,14 +25,17 @@ const Section4 = () => {
         "Ищите нужный цветок с помощью удобных фильтров, используйте круг Иттена, чтобы найти нужный цвет цветка.",
         "А с помощью фильтрации по типу вы сможете найти все цветы в каталоге нужного вам вида"
       ],
+      image: "pic-3.webp",
     },
     {
       title: "Удобная настройка цветка",
       text: ["Меняйте разные параметры цветка: от его размера до насыщенности"],
+      image: "pic-4.webp",
     },
     {
       title: "Файловая система",
       text: ["Создавайте новые холсты и храните все созданные букеты в одном месте"],
+      image: "pic-5.webp",
     }
   ];
 
@@ -48,7 +54,7 @@ const Section4 = () => {
 
         <div className="section-4__carousel">
           <img
-            src="/images/interface/transparent-flower-green.svg"
+            src={`${base}images/interface/transparent-flower-green.svg`}
             className="section-4__carousel-bg-flower"
             alt=""
           />
@@ -63,7 +69,13 @@ const Section4 = () => {
               className="section-4__carousel-slide"
               key={currentBlock}
             >
-              <div className="section-4__carousel-picture"/>
+              <div className="section-4__carousel-picture">
+                <img
+                  className="section-4__carousel-image"
+                  src={`${base}images/content/${blocks[currentBlock].image}`}
+                  alt={blocks[currentBlock].title}
+                />
+              </div>
               <div className="section-4__carousel-content">
                 <h2 className="section-4__carousel-title">{blocks[currentBlock].title}</h2>
                 <div className="section-4__carousel-text">
